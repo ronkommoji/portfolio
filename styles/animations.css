@@ -1,0 +1,619 @@
+/* ============================================
+   Portfolio Animations
+   Beautiful, professional, accessible animations
+   ============================================ */
+
+/* ============================================
+   1. CSS Custom Properties for Animations
+   ============================================ */
+:root {
+    --anim-duration-fast: 0.3s;
+    --anim-duration-normal: 0.5s;
+    --anim-duration-slow: 0.8s;
+    --anim-ease-out: cubic-bezier(0.33, 1, 0.68, 1);
+    --anim-ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+    --anim-spring: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    --anim-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ============================================
+   2. Keyframe Definitions
+   ============================================ */
+
+/* Fade and slide up - main reveal animation */
+@keyframes fadeSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Fade and slide down - for header elements */
+@keyframes fadeSlideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Scale fade in - for profile picture */
+@keyframes scaleFadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Gentle floating effect - for profile picture */
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+/* Subtle pulse glow - for accents */
+@keyframes pulseGlow {
+
+    0%,
+    100% {
+        box-shadow: 0 0 0 0 rgba(45, 95, 141, 0);
+    }
+
+    50% {
+        box-shadow: 0 0 20px 5px rgba(45, 95, 141, 0.15);
+    }
+}
+
+/* Text reveal with clip-path */
+@keyframes textReveal {
+    from {
+        clip-path: inset(0 100% 0 0);
+    }
+
+    to {
+        clip-path: inset(0 0 0 0);
+    }
+}
+
+/* Underline grow from center */
+@keyframes underlineGrow {
+    from {
+        transform: scaleX(0);
+    }
+
+    to {
+        transform: scaleX(1);
+    }
+}
+
+/* Shimmer effect for hover states */
+@keyframes shimmer {
+    0% {
+        background-position: -200% 0;
+    }
+
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+/* Rotate in - for icons */
+@keyframes rotateIn {
+    from {
+        opacity: 0;
+        transform: rotate(-180deg) scale(0.5);
+    }
+
+    to {
+        opacity: 1;
+        transform: rotate(0) scale(1);
+    }
+}
+
+/* Stagger container */
+@keyframes staggerFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Bottom nav fade slide up - preserves centeringX */
+@keyframes bottomNavFadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+/* Gentle breathing - for ambient elements */
+@keyframes breathe {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.02);
+        opacity: 0.95;
+    }
+}
+
+/* Gradient shift for backgrounds */
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* ============================================
+   3. Page Load Animation Classes
+   ============================================ */
+
+/* Initial state - hidden */
+.anim-hidden {
+    opacity: 0;
+}
+
+/* Scroll reveal base */
+.anim-reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity var(--anim-duration-slow) var(--anim-ease-out),
+        transform var(--anim-duration-slow) var(--anim-ease-out);
+}
+
+.anim-reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Stagger children delays */
+.anim-stagger>*:nth-child(1) {
+    transition-delay: 0ms;
+}
+
+.anim-stagger>*:nth-child(2) {
+    transition-delay: 80ms;
+}
+
+.anim-stagger>*:nth-child(3) {
+    transition-delay: 160ms;
+}
+
+.anim-stagger>*:nth-child(4) {
+    transition-delay: 240ms;
+}
+
+.anim-stagger>*:nth-child(5) {
+    transition-delay: 320ms;
+}
+
+.anim-stagger>*:nth-child(6) {
+    transition-delay: 400ms;
+}
+
+.anim-stagger>*:nth-child(7) {
+    transition-delay: 480ms;
+}
+
+.anim-stagger>*:nth-child(8) {
+    transition-delay: 560ms;
+}
+
+/* Page load animations with delays */
+.anim-load-1 {
+    animation: fadeSlideDown var(--anim-duration-slow) var(--anim-ease-out) 0.1s both;
+}
+
+.anim-load-2 {
+    animation: fadeSlideDown var(--anim-duration-slow) var(--anim-ease-out) 0.25s both;
+}
+
+.anim-load-3 {
+    animation: fadeSlideUp var(--anim-duration-slow) var(--anim-ease-out) 0.4s both;
+}
+
+.anim-load-4 {
+    animation: scaleFadeIn var(--anim-duration-slow) var(--anim-ease-out) 0.55s both;
+}
+
+.anim-load-5 {
+    animation: fadeSlideUp var(--anim-duration-slow) var(--anim-ease-out) 0.7s both;
+}
+
+/* ============================================
+   4. Hover & Interactive Animations
+   ============================================ */
+
+/* Enhanced project card hover */
+.project-card {
+    transition: transform var(--anim-duration-normal) var(--anim-spring),
+        box-shadow var(--anim-duration-normal) var(--anim-ease-out),
+        border-color var(--anim-duration-fast) ease;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px -10px var(--shadow-subtle),
+        0 0 0 1px var(--border-emphasis);
+}
+
+/* Project image zoom on hover */
+.project-card .project-image img {
+    transition: transform var(--anim-duration-slow) var(--anim-ease-out);
+}
+
+.project-card:hover .project-image img {
+    transform: scale(1.08);
+}
+
+/* Button hover effects */
+.view-project-btn {
+    position: relative;
+    overflow: hidden;
+    transition: all var(--anim-duration-fast) var(--anim-ease-out);
+}
+
+.view-project-btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s ease, height 0.6s ease;
+}
+
+.view-project-btn:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+.view-project-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px -5px rgba(0, 0, 0, 0.2);
+}
+
+.view-project-btn:active {
+    transform: translateY(0) scale(0.98);
+}
+
+/* Arrow animation on button hover */
+.view-project-btn svg {
+    transition: transform var(--anim-duration-fast) var(--anim-ease-out);
+}
+
+.view-project-btn:hover svg {
+    transform: translate(3px, -3px);
+}
+
+/* Navigation link animations - enhanced */
+.nav-links a {
+    position: relative;
+    transition: color var(--anim-duration-fast) ease,
+        transform var(--anim-duration-fast) ease;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: var(--accent-primary);
+    transition: width var(--anim-duration-normal) var(--anim-spring),
+        left var(--anim-duration-normal) var(--anim-spring);
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    transform: translateX(4px);
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+    width: 100%;
+    left: 0;
+}
+
+/* Experience item animations */
+.experience-item {
+    transition: border-color var(--anim-duration-fast) ease,
+        box-shadow var(--anim-duration-normal) var(--anim-ease-out);
+}
+
+.experience-item:hover {
+    box-shadow: 0 4px 20px -5px var(--shadow-subtle);
+}
+
+.experience-header {
+    transition: background-color var(--anim-duration-fast) ease,
+        padding-left var(--anim-duration-fast) ease;
+}
+
+.experience-header:hover {
+    padding-left: 28px;
+}
+
+/* Dropdown icon rotation */
+.dropdown-icon {
+    transition: transform var(--anim-duration-normal) var(--anim-spring);
+}
+
+.experience-header[aria-expanded="true"] .dropdown-icon {
+    transform: rotate(180deg);
+}
+
+/* Social link enhanced animations */
+.social-link {
+    transition: all var(--anim-duration-normal) var(--anim-spring);
+}
+
+.social-link:hover {
+    transform: translateY(-3px);
+}
+
+.social-link:hover .social-icon {
+    animation: rotateIn 0.4s var(--anim-ease-out);
+}
+
+/* ============================================
+   5. Profile Picture Animations
+   ============================================ */
+
+.about-picture {
+    transition: transform var(--anim-duration-normal) var(--anim-ease-out),
+        box-shadow var(--anim-duration-normal) var(--anim-ease-out);
+}
+
+.about-picture:hover {
+    transform: scale(1.05) rotate(2deg);
+    box-shadow: 0 15px 40px -10px var(--shadow-subtle);
+}
+
+/* Optional floating effect - uncomment to enable continuous animation */
+/* .about-picture {
+    animation: float 4s ease-in-out infinite;
+} */
+
+/* ============================================
+   6. Text Highlight Animations
+   ============================================ */
+
+/* Highlighted words in about section */
+.about-body strong {
+    position: relative;
+    transition: color var(--anim-duration-fast) ease;
+}
+
+.about-body strong::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    height: 2px;
+    background: var(--accent-primary);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform var(--anim-duration-normal) var(--anim-ease-out);
+}
+
+.about-body strong:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+/* Handwritten name subtle animation */
+.handwritten-name {
+    transition: transform var(--anim-duration-fast) var(--anim-spring),
+        color var(--anim-duration-fast) ease;
+}
+
+.handwritten-name:hover {
+    transform: rotate(-4deg) scale(1.05);
+}
+
+/* ============================================
+   7. Section Header Animations
+   ============================================ */
+
+.section-header {
+    position: relative;
+    overflow: hidden;
+}
+
+.section-header::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, var(--accent-primary), transparent);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform var(--anim-duration-slow) var(--anim-ease-out);
+}
+
+.anim-reveal.is-visible .section-header::before,
+.section-header.is-visible::before {
+    transform: scaleX(1);
+}
+
+/* ============================================
+   8. Skills Section Animations
+   ============================================ */
+
+.bullet-list li {
+    transition: transform var(--anim-duration-fast) ease,
+        padding-left var(--anim-duration-fast) ease;
+}
+
+.bullet-list li:hover {
+    transform: translateX(4px);
+    padding-left: 24px;
+}
+
+.bullet-list li::before {
+    transition: transform var(--anim-duration-fast) var(--anim-spring),
+        color var(--anim-duration-fast) ease;
+}
+
+.bullet-list li:hover::before {
+    transform: scale(1.3);
+}
+
+/* ============================================
+   9. Footer & Bottom Nav Animations
+   ============================================ */
+
+.footer-email a {
+    position: relative;
+    transition: color var(--anim-duration-fast) ease;
+}
+
+.footer-email a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 1px;
+    background: var(--text-primary);
+    transition: width var(--anim-duration-normal) var(--anim-ease-out);
+}
+
+.footer-email a:hover::after {
+    width: 100%;
+}
+
+/* Bottom nav entrance animation */
+.bottom-nav {
+    animation: bottomNavFadeIn var(--anim-duration-slow) var(--anim-ease-out) 0.8s both;
+}
+
+/* ============================================
+   10. Theme Toggle Animations
+   ============================================ */
+
+.theme-word {
+    transition: all var(--anim-duration-fast) var(--anim-ease-out);
+    position: relative;
+}
+
+.theme-word::before {
+    content: '';
+    position: absolute;
+    inset: -4px -8px;
+    background: var(--accent-primary);
+    opacity: 0;
+    border-radius: 4px;
+    transition: opacity var(--anim-duration-fast) ease;
+    z-index: -1;
+}
+
+.theme-word:hover::before {
+    opacity: 0.1;
+}
+
+.theme-word.active {
+    font-weight: 600;
+}
+
+/* ============================================
+   11. Reduced Motion - Accessibility
+   ============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+
+    .anim-reveal {
+        opacity: 1;
+        transform: none;
+    }
+
+    .anim-load-1,
+    .anim-load-2,
+    .anim-load-3,
+    .anim-load-4,
+    .anim-load-5 {
+        animation: none;
+        opacity: 1;
+    }
+}
+
+/* ============================================
+   12. Dark Mode Animation Adjustments
+   ============================================ */
+
+[data-theme="dark"] .project-card:hover {
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.5),
+        0 0 30px -5px rgba(90, 159, 212, 0.15);
+}
+
+[data-theme="dark"] .about-picture:hover {
+    box-shadow: 0 15px 40px -10px rgba(0, 0, 0, 0.5);
+}
+
+[data-theme="dark"] .experience-item:hover {
+    box-shadow: 0 4px 20px -5px rgba(0, 0, 0, 0.4);
+}
+
+[data-theme="dark"] .view-project-btn:hover {
+    box-shadow: 0 8px 20px -5px rgba(0, 0, 0, 0.4);
+}

@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ron Kommoji | Portfolio</title>
+    <meta name="description"
+        content="Ron Kommoji - Computer Science student at Georgia Tech. AI/ML, data science, product builder.">
+    <meta name="keywords" content="Ron Kommoji, Georgia Tech, Computer Science, AI, Machine Learning, Portfolio">
+    <meta name="author" content="Ron Kommoji">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=JetBrains+Mono:wght@400;500;600&family=Caveat:wght@700&family=Inter:wght@800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="styles/animations.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+</head>
+
+<body>
+    <!-- Fixed Page Header -->
+    <header class="page-header">
+        <div class="header-quote anim-load-1">
+            "For it is you who <span class="theme-word" id="theme-light" role="button" tabindex="0">light</span> my
+            lamp; the Lord my God lightens my <span class="theme-word" id="theme-dark" role="button"
+                tabindex="0">darkness</span>."
+            <span class="quote-author">— Psalm 18:28</span>
+        </div>
+        <div class="header-name anim-load-2">
+            <h1 class="name">Ron Kommoji</h1>
+            <p class="tagline">COMPUTER SCIENCE • DATA SCIENCE • PRODUCT BUILDER</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar anim-load-3">
+            <ul class="nav-links">
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#education">EDUCATION</a></li>
+                <li><a href="#experience">EXPERIENCE</a></li>
+                <li><a href="#projects">PROJECTS</a></li>
+                <li><a href="#skills">SKILLS</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="content-area">
+
+            <!-- About Section -->
+            <section id="about" class="anim-reveal" data-anim>
+                <!-- Header removed as requested -->
+                <div class="about-content">
+                    <!-- About Photo (Moved to top) -->
+                    <img src="assets/images/RonProfessionalHeadshot.png" alt="Ron Kommoji"
+                        class="about-picture anim-load-4">
+
+                    <div class="about-text-wrapper anim-load-5">
+                        <div class="about-greeting">
+                            Hey, I'm <span class="handwritten-name">Ron Kommoji!</span>
+                        </div>
+
+                        <h3 class="about-headline">
+                            I'm a <strong>ISyE + CS student</strong> @ GT who loves building
+                            <strong>impactful products</strong> that solve real problems.
+                        </h3>
+
+                        <div class="about-body">
+                            <p>I'm passionate about <strong>Product</strong>, <strong>AI/ML</strong>, <strong>Data
+                                    Science</strong>, and building <strong>Startups</strong> that solve problems and
+                                help people be more productive. Currently, I'm building <strong>Due Gooder</strong>, a
+                                web
+                                app that helps students manage their schedules and deadlines, and
+                                <strong>Rooted</strong>,
+                                a mobile app that helps small groups in churches find and build community.
+                            </p>
+
+                            <p class="about-education-highlight">
+                                Please <strong>reach out</strong> if you'd like to chat or collaborate on anything.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Education Section -->
+            <section id="education" class="anim-reveal" data-anim>
+                <h2 class="section-header">EDUCATION</h2>
+                <div class="section-content">
+                    <div class="education-item">
+                        <h3 class="institution">Georgia Institute of Technology</h3>
+                        <p class="degree">B.S. Industrial and Systems Engineering | Minor: Computer Science (AI/ML)</p>
+                        <p class="education-meta">Expected May 2027 • GPA: 3.7/4.00</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Experience Section -->
+            <section id="experience" class="anim-reveal" data-anim>
+                <h2 class="section-header">EXPERIENCE</h2>
+                <div class="section-content anim-stagger">
+                    <!-- Experience Item 1: Duke Engineering -->
+                    <div class="experience-item">
+                        <button class="experience-header" aria-expanded="false">
+                            <div class="experience-meta">
+                                <span class="date">Sept 2025 – Present</span>
+                                <span class="separator">/</span>
+                                <span class="company">Duke College of Engineering</span>
+                                <span class="separator">/</span>
+                                <span class="role">AI/ML Researcher</span>
+                            </div>
+                            <svg class="dropdown-icon" width="12" height="12" viewBox="0 0 12 12">
+                                <path d="M2 4L6 8L10 4" stroke="currentColor" stroke-width="1.5" fill="none" />
+                            </svg>
+                        </button>
+
+                        <div class="experience-details" hidden>
+                            <ul class="bullet-list">
+                                <li>Orchestrated agent framework in CrewAI, integrated with OpenAI's GPT-4 for natural
+                                    language reasoning, creating 5 specialized agents and 3 "critic" agents to recommend
+                                    ECMO parameter adjustments across 5 domains</li>
+                                <li>Built a multi-agentic academic reference verification system using CrewAI and Python
+                                    orchestrating 4 specialized agents that improved verification accuracy by 25%
+                                    compared to baseline LLM prompts across 10,000+ references</li>
+                                <li>Developed a claim validation pipeline combining embedding-based retrieval, NLI
+                                    inference, and LLM verification, achieving 88% verdict accuracy on 10,000
+                                    claim-source pairs with semantic similarity matching and sentence extraction</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Experience Item 2: PXP Financial -->
+                    <div class="experience-item">
+                        <button class="experience-header" aria-expanded="false">
+                            <div class="experience-meta">
+                                <span class="date">Aug 2025 – Oct 2025</span>
+                                <span class="separator">/</span>
+                                <span class="company">PXP Financial</span>
+                                <span class="separator">/</span>
+                                <span class="role">AI Automation Engineer Intern</span>
+                            </div>
+                            <svg class="dropdown-icon" width="12" height="12" viewBox="0 0 12 12">
+                                <path d="M2 4L6 8L10 4" stroke="currentColor" stroke-width="1.5" fill="none" />
+                            </svg>
+                        </button>
+
+                        <div class="experience-details" hidden>
+                            <ul class="bullet-list">
+                                <li>Developed an AI-powered competitive intelligence platform using Azure OpenAI
+                                    (o4-mini) and OpenAI Agents SDK that generates comprehensive company research
+                                    reports across 10 strategic business topics</li>
+                                <li>Built multi-agent system with 5 specialized AI agents (Web Search Planner, Web
+                                    Search Agent, Report Writer, HTML Creator, and Coordinator) that processes 3-5
+                                    search queries per topic and generates both text and HTML reports</li>
+                                <li>Created a fitness app using 8-node n8n AI workflow as a backend, integrated with
+                                    Azure OpenAI API to analyze images for macronutrients, and engineering simple
+                                    mobile-friendly frontend for image uploads and information tracking</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Experience Item 3: Fiserv -->
+                    <div class="experience-item">
+                        <button class="experience-header" aria-expanded="false">
+                            <div class="experience-meta">
+                                <span class="date">June 2024 – Aug 2025</span>
+                                <span class="separator">/</span>
+                                <span class="company">Fiserv</span>
+                                <span class="separator">/</span>
+                                <span class="role">Product Management Intern</span>
+                            </div>
+                            <svg class="dropdown-icon" width="12" height="12" viewBox="0 0 12 12">
+                                <path d="M2 4L6 8L10 4" stroke="currentColor" stroke-width="1.5" fill="none" />
+                            </svg>
+                        </button>
+
+                        <div class="experience-details" hidden>
+                            <ul class="bullet-list">
+                                <li>Partner with cross-functional teams across Engineering, Sales, Product, and
+                                    Marketing to align the product roadmap for Data Compass with customer insights and
+                                    market opportunities, improving feature prioritization</li>
+                                <li>Monitored interactive dashboard for daily data loads from Snowflake for 70+ clients
+                                    and 5,000,000 data points to identify process inefficiencies and unmet customer
+                                    needs to enhance product usage and accuracy</li>
+                                <li>Created CJM through interviews with 3 clients and a targeted survey to uncover
+                                    process inefficiencies, presenting data-driven recommendations to senior leadership
+                                    (implementing an alerting feature) for 200 backlogged clients</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Experience Item 4: Tier4 Group -->
+                    <div class="experience-item">
+                        <button class="experience-header" aria-expanded="false">
+                            <div class="experience-meta">
+                                <span class="date">Apr 2024 – May 2025</span>
+                                <span class="separator">/</span>
+                                <span class="company">Tier4 Group</span>
+                                <span class="separator">/</span>
+                                <span class="role">Operations/Data Specialist Intern</span>
+                            </div>
+                            <svg class="dropdown-icon" width="12" height="12" viewBox="0 0 12 12">
+                                <path d="M2 4L6 8L10 4" stroke="currentColor" stroke-width="1.5" fill="none" />
+                            </svg>
+                        </button>
+
+                        <div class="experience-details" hidden>
+                            <ul class="bullet-list">
+                                <li>Facilitated the migration of over 2,500 client records to a new CRM system by
+                                    validating/cleaning datasets from Excel</li>
+                                <li>Conducted a comprehensive audit of 200+ client accounts to resolve cross-system data
+                                    discrepancies with new system</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Experience Item 5: Ascent Solutions LLC -->
+                    <div class="experience-item">
+                        <button class="experience-header" aria-expanded="false">
+                            <div class="experience-meta">
+                                <span class="date">Apr 2024 – Aug 2024</span>
+                                <span class="separator">/</span>
+                                <span class="company">Ascent Solutions LLC</span>
+                                <span class="separator">/</span>
+                                <span class="role">Data Analytics Intern</span>
+                            </div>
+                            <svg class="dropdown-icon" width="12" height="12" viewBox="0 0 12 12">
+                                <path d="M2 4L6 8L10 4" stroke="currentColor" stroke-width="1.5" fill="none" />
+                            </svg>
+                        </button>
+
+                        <div class="experience-details" hidden>
+                            <ul class="bullet-list">
+                                <li>Optimized MySQL queries that accessed and analyzed customer data, reducing retrieval
+                                    and processing time by 30%</li>
+                                <li>Gained MERN stack experience by collaborating on a user registration form,
+                                    understanding full-stack and API concepts</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projects Section -->
+            <section id="projects" class="anim-reveal" data-anim>
+                <h2 class="section-header">PROJECTS</h2>
+                <p class="projects-intro">Some things I've built over the past few years:</p>
+
+                <div class="projects-grid">
+                    <!-- Project Card 1: Due Gooder -->
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="assets/images/duegooder.png" alt="Due Gooder screenshot">
+                        </div>
+                        <h3 class="project-name">Due Gooder</h3>
+                        <p class="project-description">Campus productivity platform scaled from 10K to 25K users with
+                            product-led growth and real-time analytics dashboard.</p>
+                        <a href="https://duegooder.com/" class="view-project-btn" target="_blank">
+                            View Project
+                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                                <path d="M1 11L11 1M11 1H1M11 1V11" stroke="currentColor" stroke-width="1.5" />
+                            </svg>
+                        </a>
+                    </div>
+
+                    <!-- Project Card 2: Rooted -->
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="assets/images/rooted.png" alt="Rooted screenshot">
+                        </div>
+                        <h3 class="project-name">Rooted</h3>
+                        <p class="project-description">Mobile app helping small groups grow through shared devotionals,
+                            prayer, and accountability.</p>
+                        <a href="https://rootedgroup.framer.website/" class="view-project-btn" target="_blank">
+                            View Project
+                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                                <path d="M1 11L11 1M11 1H1M11 1V11" stroke="currentColor" stroke-width="1.5" />
+                            </svg>
+                        </a>
+                    </div>
+
+                    <!-- Project Card 3: Cosmos -->
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="assets/images/cosmos.png" alt="Cosmos screenshot">
+                        </div>
+                        <h3 class="project-name">Cosmos</h3>
+                        <p class="project-description">AI-powered web app connecting students with professors for
+                            research collaboration using CrewAI agents and Google OAuth.</p>
+                        <a href="https://researchcosmos.vercel.app/" class="view-project-btn" target="_blank">
+                            View Project
+                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                                <path d="M1 11L11 1M11 1H1M11 1V11" stroke="currentColor" stroke-width="1.5" />
+                            </svg>
+                        </a>
+                    </div>
+
+                    <!-- Project Card 4: Perq -->
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="assets/images/perq.png" alt="Perq screenshot">
+                        </div>
+                        <h3 class="project-name">Perq</h3>
+                        <p class="project-description">Loyalty and discovery platform that gamifies supporting local
+                            businesses, rewarding users with points and perks while helping SMBs grow smarter.</p>
+                        <a href="https://www.getperq.com/" class="view-project-btn" target="_blank">
+                            View Project
+                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                                <path d="M1 11L11 1M11 1H1M11 1V11" stroke="currentColor" stroke-width="1.5" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <p class="projects-footer">And many more — check my <a href="https://github.com/ronkommoji"
+                        target="_blank">GitHub</a> for most of my work!</p>
+            </section>
+
+            <!-- Skills Section -->
+            <section id="skills" class="anim-reveal" data-anim>
+                <h2 class="section-header">SKILLS</h2>
+                <div class="section-content">
+                    <ul class="bullet-list">
+                        <li><strong>Languages:</strong> Python (pandas, NumPy, Scikit-Learn, Flask, matplotlib), Java
+                            (OOP, JavaFX), JavaScript (React, React Native, Node.js, Next.js), SQL (MySQL, PostgreSQL),
+                            HTML/CSS, APIs</li>
+                        <li><strong>Frameworks & Tools:</strong> AWS, Vercel, Streamlit, Git, CI/CD, Supabase, MongoDB,
+                            Tableau, Power BI, Cursor, Expo, Figma</li>
+                        <li><strong>Interests:</strong> Colognes, Basketball, Running, Hiking, Tennis, Pickleball,
+                            College Football,
+                            Movies, Guitar, Energy Drinks/Coffee Shops, Chipotle</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Footer Elements (Moved inside content-area) -->
+        </main>
+    </div>
+
+    <!-- Fixed Footer (Mirrors page-header positioning) -->
+    <footer class="page-footer">
+        <div class="footer-email">
+            <a href="mailto:ronkommoji@gmail.com">ronkommoji@gmail.com</a>
+        </div>
+        <div class="footer-copyright">
+            <p>©2026 RON KOMMOJI</p>
+        </div>
+    </footer>
+
+    <!-- Bottom Social Navbar -->
+    <nav class="bottom-nav">
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/ron-kommoji" target="_blank" class="social-link" aria-label="LinkedIn">
+                <svg class="social-icon" width="20" height="20" viewBox="0 0 24 24" fill="none">
+                    <path
+                        d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                        fill="currentColor" />
+                </svg>
+                <span class="social-label">LinkedIn</span>
+            </a>
+
+            <a href="https://github.com/ronkommoji" target="_blank" class="social-link" aria-label="GitHub">
+                <svg class="social-icon" width="20" height="20" viewBox="0 0 24 24" fill="none">
+                    <path
+                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+                        fill="currentColor" />
+                </svg>
+                <span class="social-label">GitHub</span>
+            </a>
+
+            <a href="mailto:ronkommoji@gmail.com" class="social-link" aria-label="Email">
+                <svg class="social-icon" width="20" height="20" viewBox="0 0 24 24" fill="none">
+                    <path
+                        d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
+                        fill="currentColor" />
+                </svg>
+                <span class="social-label">Email</span>
+            </a>
+
+            <a href="https://calendly.com/ronkommoji" target="_blank" class="social-link" aria-label="Coffee Chat">
+                <svg class="social-icon" width="20" height="20" viewBox="0 0 24 24" fill="none">
+                    <path
+                        d="M20 3H4v10c0 2.21 1.79 4 4 4h6c2.21 0 4-1.79 4-4v-3h2c1.11 0 2-.89 2-2V5c0-1.11-.89-2-2-2zm0 5h-2V5h2v3zM4 19h16v2H4z"
+                        fill="currentColor" />
+                </svg>
+                <span class="social-label">Coffee Chat</span>
+            </a>
+
+            <a href="assets/Ron_Kommoji_Resume.pdf" target="_blank" class="social-link" aria-label="Resume">
+                <svg class="social-icon" width="20" height="20" viewBox="0 0 24 24" fill="none">
+                    <path
+                        d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"
+                        fill="currentColor" />
+                </svg>
+                <span class="social-label">Resume</span>
+            </a>
+        </div>
+    </nav>
+
+    <script src="scripts/main.js"></script>
+</body>
+
+</html>

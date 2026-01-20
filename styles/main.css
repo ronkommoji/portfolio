@@ -1,0 +1,307 @@
+/* Main CSS - Variables & Global Styles */
+
+:root {
+  /* Primary Colors */
+  --bg-primary: #FFF9F0;
+  /* Warm off-white */
+  --text-primary: #1A1A1C;
+  /* Near-black */
+  --text-secondary: #6B6B6B;
+  /* Medium gray */
+
+  /* Accents */
+  --accent-primary: #2D5F8D;
+  /* Deep technical blue */
+  --accent-hover: #1A3A5C;
+  /* Darker blue */
+  --accent-success: #3A7D44;
+  /* Subtle green */
+
+  /* Borders & Dividers */
+  --border-subtle: #E0DDD8;
+  /* Barely visible */
+  --border-emphasis: #C5C2BC;
+  /* Visible but soft */
+
+  /* Overlays */
+  --overlay-light: rgba(247, 245, 242, 0.95);
+  --shadow-subtle: rgba(26, 26, 28, 0.08);
+
+  /* Spacing System */
+  --space-xs: 8px;
+  --space-sm: 16px;
+  --space-md: 24px;
+  --space-lg: 40px;
+  --space-xl: 64px;
+  --space-2xl: 100px;
+  --space-3xl: 140px;
+}
+
+/* Dark Mode Theme */
+[data-theme="dark"] {
+  /* Primary Colors - Inverted */
+  --bg-primary: #181818;
+  /* Deep charcoal */
+  --text-primary: #FFF9F0;
+  /* Warm beige from light mode */
+  --text-secondary: #A0A0A0;
+  /* Light gray */
+
+  /* Accents - Brighter for dark mode */
+  --accent-primary: #5A9FD4;
+  /* Lighter technical blue */
+  --accent-hover: #7BB8E8;
+  /* Even lighter blue */
+  --accent-success: #5EAD6B;
+  /* Brighter green */
+
+  /* Borders & Dividers */
+  --border-subtle: #2A2A2E;
+  /* Dark subtle border */
+  --border-emphasis: #3D3D42;
+  /* Visible dark border */
+
+  /* Overlays */
+  --overlay-light: rgba(13, 13, 15, 0.95);
+  --shadow-subtle: rgba(0, 0, 0, 0.3);
+}
+
+/* Dark mode specific overrides */
+[data-theme="dark"] .name {
+  color: #FFF9F0;
+}
+
+[data-theme="dark"] .social-links {
+  background: rgba(30, 30, 35, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+[data-theme="dark"] .social-link:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+[data-theme="dark"] .experience-header:hover {
+  background-color: rgba(255, 255, 255, 0.03);
+}
+
+/* Theme Word Toggle - Clickable underlined words in verse */
+.theme-word {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1.5px;
+  cursor: pointer;
+  color: var(--text-primary);
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.theme-word:hover {
+  color: var(--accent-primary);
+  text-decoration-color: var(--accent-primary);
+}
+
+.theme-word:focus {
+  outline: 2px solid var(--accent-primary);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Active state indicator for current theme */
+#theme-light.active {
+  color: var(--accent-primary);
+  text-decoration-color: var(--accent-primary);
+  text-decoration-thickness: 2px;
+}
+
+#theme-dark.active {
+  color: var(--accent-primary);
+  text-decoration-color: var(--accent-primary);
+  text-decoration-thickness: 2px;
+}
+
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: 'JetBrains Mono', monospace;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Fixed Page Header */
+.page-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  z-index: 100;
+  pointer-events: none;
+}
+
+.header-quote,
+.header-name {
+  pointer-events: auto;
+}
+
+.header-quote {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  max-width: 200px;
+}
+
+.header-quote .quote-author {
+  display: block;
+  margin-top: 4px;
+  color: var(--text-primary);
+}
+
+.header-name {
+  text-align: right;
+}
+
+.name {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(48px, 5vw, 72px);
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  line-height: 0.9;
+  margin-bottom: 12px;
+  color: #0A0A0A;
+  text-transform: none;
+}
+
+.tagline {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+}
+
+/* Layout */
+.container {
+  padding: 0 25px;
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.content-area {
+  max-width: 650px;
+  width: 100%;
+  padding-bottom: 120px;
+}
+
+/* Fixed Footer (Mirrors page-header) */
+.page-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  z-index: 90;
+  pointer-events: none;
+}
+
+.footer-email,
+.footer-copyright {
+  pointer-events: auto;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+}
+
+.footer-email a {
+  color: var(--text-primary);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s;
+}
+
+.footer-email a:hover {
+  border-bottom-color: var(--text-primary);
+}
+
+/* Section Styling */
+section {
+  margin-bottom: var(--space-2xl);
+  padding-top: var(--space-2xl);
+  /* Offset for anchor links */
+  margin-top: calc(var(--space-2xl) * -1);
+  /* Pull back so layout doesn't break */
+}
+
+.section-header {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  color: var(--text-secondary);
+  margin-bottom: 32px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border-subtle);
+  display: inline-block;
+  /* Make border span only text width */
+}
+
+/* Utility Classes */
+.bullet-list li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 12px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text-primary);
+}
+
+.bullet-list li::before {
+  content: '§';
+  position: absolute;
+  left: 0;
+  color: var(--accent-primary);
+  font-weight: 600;
+}
