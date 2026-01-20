@@ -1,6 +1,41 @@
 // Main JavaScript
 
 document.addEventListener('DOMContentLoaded', () => {
+    // 0.5. Mobile Menu Toggle
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const sidebar = document.getElementById('mobile-nav');
+
+    if (mobileMenuBtn && sidebar) {
+        mobileMenuBtn.addEventListener('click', () => {
+            const isOpen = sidebar.classList.contains('open');
+            sidebar.classList.toggle('open');
+            mobileMenuBtn.classList.toggle('active');
+            mobileMenuBtn.setAttribute('aria-expanded', !isOpen);
+
+            // Prevent body scroll when menu is open
+            document.body.style.overflow = isOpen ? '' : 'hidden';
+        });
+
+        // Close menu when clicking a nav link
+        sidebar.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                sidebar.classList.remove('open');
+                mobileMenuBtn.classList.remove('active');
+                mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                document.body.style.overflow = '';
+            });
+        });
+
+        // Close menu when clicking outside (on the backdrop)
+        sidebar.addEventListener('click', (e) => {
+            if (e.target === sidebar) {
+                sidebar.classList.remove('open');
+                mobileMenuBtn.classList.remove('active');
+                mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                document.body.style.overflow = '';
+            }
+        });
+    }
     // 0. Dark Mode Toggle via Bible Verse Words
     const themeLightWord = document.getElementById('theme-light');
     const themeDarkWord = document.getElementById('theme-dark');
