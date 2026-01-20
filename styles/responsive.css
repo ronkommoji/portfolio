@@ -1,7 +1,7 @@
 /* Responsive CSS */
 
-/* Tablet (768px - 1023px) */
-@media (max-width: 1023px) {
+/* Tablet ONLY (768px - 1023px) - does NOT apply to mobile */
+@media (min-width: 768px) and (max-width: 1023px) {
     .page-header {
         padding: 20px;
     }
