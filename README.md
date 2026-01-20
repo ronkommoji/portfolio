@@ -4,7 +4,6 @@ A brutalist minimalist portfolio website built with HTML, CSS, and Vanilla JavaS
 
 ## Design Philosophy
 - **Aesthetic**: Editorial Minimalism with Technical Precision.
-- **Inspiration**: Siddharth Bellad (Visuals) & Pranav Konjeti (Structure).
 - **Key Features**:
   - Text-first content hierarchy.
   - Terminal status widget.
