@@ -353,13 +353,18 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!ticking) {
                 requestAnimationFrame(() => {
                     const scrollY = window.scrollY;
+                    const isMobile = window.innerWidth < 768;
 
-                    // Fade out header name on scroll (quote stays visible)
-                    if (headerName && scrollY < 500) {
+                    // Fade out header name on scroll (quote stays visible) - DESKTOP ONLY
+                    if (headerName && scrollY < 500 && !isMobile) {
                         const opacity = Math.max(0, 1 - scrollY / 300);
                         const translateY = scrollY * 0.2;
                         headerName.style.opacity = opacity;
                         headerName.style.transform = `translateY(${translateY}px)`;
+                    } else if (headerName && isMobile) {
+                        // Keep name visible on mobile
+                        headerName.style.opacity = '1';
+                        headerName.style.transform = 'translateY(0)';
                     }
 
                     // Very subtle float on profile picture while scrolling
