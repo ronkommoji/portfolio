@@ -361,7 +361,68 @@
     border-bottom-color: var(--accent-primary);
 }
 
-/* 7. Bottom Social Navbar */
+/* 7. Tech Stack Section */
+.tech-scroll-wrapper {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    padding: 4px 0 8px;
+}
+
+.tech-scroll-wrapper::before,
+.tech-scroll-wrapper::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 48px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.tech-scroll-wrapper::before {
+    left: 0;
+    background: linear-gradient(to right, var(--bg-primary), transparent);
+}
+
+.tech-scroll-wrapper::after {
+    right: 0;
+    background: linear-gradient(to left, var(--bg-primary), transparent);
+}
+
+.tech-scroll-track {
+    display: flex;
+    gap: 40px;
+    width: max-content;
+    align-items: center;
+}
+
+.tech-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: transform 0.25s var(--anim-spring), opacity 0.25s ease;
+}
+
+.tech-item:hover {
+    transform: translateY(-4px);
+}
+
+.tech-item img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    display: block;
+    transition: filter 0.25s ease;
+}
+
+/* Dark mode: invert black logos so they show on dark background */
+[data-theme="dark"] .logo-invert-dark {
+    filter: invert(1);
+}
+
+/* 8. Bottom Social Navbar */
 .bottom-nav {
     position: fixed;
     bottom: 32px;

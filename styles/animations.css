@@ -568,10 +568,36 @@
 }
 
 /* ============================================
-   11. Reduced Motion - Accessibility
+   11. Tech Stack Marquee Animation
+   ============================================ */
+
+@keyframes techMarquee {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+.tech-scroll-track {
+    animation: techMarquee 30s linear infinite;
+}
+
+.tech-scroll-wrapper:hover .tech-scroll-track {
+    animation-play-state: paused;
+}
+
+/* ============================================
+   12. Reduced Motion - Accessibility
    ============================================ */
 
 @media (prefers-reduced-motion: reduce) {
+
+    .tech-scroll-track {
+        animation: none;
+    }
 
     *,
     *::before,
